@@ -65,18 +65,18 @@ func createDatabase(db *sql.DB) {
 	checkIfError(err)
 
 	stmt = `CREATE TABLE DemoAccount (
-						id int PRIMARY KEY,
-						name varchar,
-						age int,
-						country varchar,
-						balance int)`
+                        id int PRIMARY KEY,
+                        name varchar,
+                        age int,
+                        country varchar,
+                        balance int)`
 
 	_, err = db.Exec(stmt)
 	checkIfError(err)
 
-	stmt = `INSERT INTO DemoAccount VALUES 
-				(1, 'Jessica', 28, 'USA', 10000),
-				(2, 'John', 28, 'Canada', 9000)`
+	stmt = `INSERT INTO DemoAccount VALUES
+                (1, 'Jessica', 28, 'USA', 10000),
+                (2, 'John', 28, 'Canada', 9000)`
 
 	_, err = db.Exec(stmt)
 	checkIfError(err)
@@ -138,7 +138,7 @@ func checkIfTxAborted(err error) bool {
 		if pqErr.Code == `40001` {
 			fmt.Println(
 				`The operation is aborted due to a concurrent transaction that is modifying the same set of rows.
-				 Consider adding retry logic for production-grade applications.`)
+                 Consider adding retry logic for production-grade applications.`)
 			return true
 
 		}
