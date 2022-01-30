@@ -35,9 +35,16 @@ const (
 )
 
 func main() {
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s"+
-		" dbname=%s sslmode=%s sslrootcert=%s",
-		host, port, dbUser, dbPassword, dbName, sslMode, sslRootCert)
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s",
+		host, port, dbUser, dbPassword, dbName)
+
+	if sslMode != "" {
+		psqlInfo += fmt.Sprintf(" sslmode=%s", sslMode)
+
+		if sslRootCert != "" {
+			psqlInfo += fmt.Sprintf(" sslrootcert=%s", sslRootCert)
+		}
+	}
 
 	db, err := sql.Open("postgres", psqlInfo)
 	checkIfError(err)
