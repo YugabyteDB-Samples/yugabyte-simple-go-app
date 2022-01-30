@@ -138,7 +138,7 @@ func checkIfTxAborted(err error) bool {
 		if pqErr.Code == `40001` {
 			fmt.Println(
 				`The operation is aborted due to a concurrent transaction that is modifying the same set of rows.
-         Consider adding retry logic for production-grade applications.`)
+                 Consider adding retry logic for production-grade applications.`)
 			return true
 
 		}
@@ -147,5 +147,4 @@ func checkIfTxAborted(err error) bool {
 	}
 
 	return false
-
 }
