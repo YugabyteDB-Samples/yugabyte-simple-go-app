@@ -26,7 +26,7 @@ git clone https://github.com/yugabyte/yugabyte-simple-go-app.git && cd yugabyte-
 
 The application needs to establish a secured connection to your Yugabyte Cloud instance.
 
-Open the `sample-app.go` file and specify the following configuration parametes:
+Open the `sample-app.go` file and specify the following configuration parameters:
 * `host` - the hostname of your Yugabyte Cloud instance.
 * `port` - the port number that will be used by the JDBC driver (the default is `5433`)
 * `dbUser` - the username for your instance.
