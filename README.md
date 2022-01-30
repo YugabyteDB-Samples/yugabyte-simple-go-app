@@ -72,7 +72,7 @@ name = John, age = 28, country = Canada, balance = 9800
 Congrats! You've successfully executed a simple Java app that works with Yugabyte Cloud.
 
 Now, explore the source code of `sample-app.go`:
-1. `main` function - establishes a connection with your cloud instance via the Go PostgreSQL driver.
+1. `main` function - establishes a connection with your cloud instance via Go PostgreSQL driver.
 3. `createDatabase` function - creates a table and populates it with sample data.
 4. `selectAccounts` function - queries the data with SQL `SELECT` statements.
 5. `transferMoneyBetweenAccounts` function - updates records consistently with distributed transactions.
