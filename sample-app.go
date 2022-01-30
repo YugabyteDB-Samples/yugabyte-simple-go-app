@@ -57,7 +57,7 @@ func createDatabase(db *sql.DB) {
 	_, err := db.Exec(stmt)
 	checkIfError(err)
 
-	stmt = `CREATE TABLE IF NOT EXISTS DemoAccount (
+	stmt = `CREATE TABLE DemoAccount (
 						id int PRIMARY KEY,
 						name varchar,
 						age int,
