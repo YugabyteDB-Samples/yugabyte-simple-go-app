@@ -44,7 +44,7 @@ Note, you can easily find all the settings on the Yugabyte Cloud dashboard:
     ```bash
     export GO111MODULE=auto
     ```
-2. Import the Go PostgreSQL drive:
+2. Import the Go PostgreSQL driver:
     ```bash
     go get github.com/lib/pq
     ```
@@ -69,7 +69,7 @@ name = John, age = 28, country = Canada, balance = 9800
 
 ## Explore App Logic
 
-Congrats! You've successfully executed a simple Java app that works with Yugabyte Cloud.
+Congrats! You've successfully executed a simple Go app that works with Yugabyte Cloud.
 
 Now, explore the source code of `sample-app.go`:
 1. `main` function - establishes a connection with your cloud instance via Go PostgreSQL driver.
