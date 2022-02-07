@@ -135,6 +135,7 @@ func checkIfTxAborted(err error) bool {
 	if err != nil {
 		pqErr := err.(*pq.Error)
 
+		// Applies to logic of the transferMoneyBetweenAccounts method
 		if pqErr.Code == `40001` {
 			fmt.Println(
 				`The operation is aborted due to a concurrent transaction that is modifying the same set of rows.
