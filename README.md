@@ -28,7 +28,7 @@ The application needs to establish a secured connection to your Yugabyte Cloud i
 
 Open the `sample-app.go` file and specify the following configuration parameters:
 * `host` - the hostname of your Yugabyte Cloud instance.
-* `port` - the port number that will be used by the JDBC driver (the default is `5433`)
+* `port` - the port number of your instance (the default is `5433`).
 * `dbUser` - the username for your instance.
 * `dbPassword` - the database password.
 * `sslMode` - the SSL mode. Set to `verify-full` for Yugabyte Cloud deployments.
