@@ -25,12 +25,12 @@ import (
 )
 
 const (
-	host        = ""
+	host        = "127.0.0.1"
 	port        = 5433
 	dbName      = "yugabyte"
-	dbUser      = ""
-	dbPassword  = ""
-	sslMode     = ""
+	dbUser      = "yugabyte"
+	dbPassword  = "yugabyte"
+	sslMode     = "disable"
 	sslRootCert = ""
 )
 
@@ -45,6 +45,8 @@ func main() {
 			psqlInfo += fmt.Sprintf(" sslrootcert=%s", sslRootCert)
 		}
 	}
+
+	fmt.Println(psqlInfo)
 
 	db, err := sql.Open("postgres", psqlInfo)
 	checkIfError(err)
