@@ -46,8 +46,6 @@ func main() {
 		}
 	}
 
-	fmt.Println(psqlInfo)
-
 	db, err := sql.Open("postgres", psqlInfo)
 	checkIfError(err)
 
