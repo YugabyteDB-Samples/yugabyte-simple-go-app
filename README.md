@@ -2,7 +2,7 @@
 
 The application connects to your YugabyteDB instance via 
 [Go PostgreSQL driver](https://docs.yugabyte.com/latest/reference/drivers/ysql-client-drivers/#go-postgresql-driver-pq) and performs basic SQL 
-operations. The instructions below are provided for [YugabyteDB Managed](https://cloud.yugabyte.com/) deployments. 
+operations. The instructions below are provided for [YugabyteDB Aeon](https://cloud.yugabyte.com/) deployments. 
 If you use a different type of deployment, then update the `sample-app.go` file with proper connection parameters.
 
 ## Prerequisites
@@ -10,9 +10,9 @@ If you use a different type of deployment, then update the `sample-app.go` file 
 * Go version 1.17.6 or later is preffered. Earlier versions should work as well.
 * Command line tool or your favourite IDE, such as Visual Studio Code.
 
-## Start YugabyteDB Managed Cluster
+## Start YugabyteDB Aeon Cluster
 
-* [Start YugabyteDB Managed](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. Free tier exists.
+* [Start YugabyteDB Aeon](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. Free tier exists.
 * Add an IP address of your machine/laptop to the [IP allow list](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-secure-clusters/add-connections/#manage-ip-allow-lists)
 
 ## Clone Application Repository
@@ -20,22 +20,22 @@ If you use a different type of deployment, then update the `sample-app.go` file 
 Clone the application to your machine:
 
 ```bash
-git clone https://github.com/yugabyte/yugabyte-simple-go-app.git && cd yugabyte-simple-go-app
+git clone https://github.com/YugabyteDB-Samples/yugabyte-simple-go-app.git && cd yugabyte-simple-go-app
 ```
 
 ## Provide Cluster Connection Parameters
 
-The application needs to establish a secured connection to your YugabyteDB Managed instance.
+The application needs to establish a secured connection to your YugabyteDB Aeon instance.
 
 Open the `sample-app.go` file and specify the following configuration parameters:
 * `host` - the hostname of your instance.
 * `port` - the port number of your instance (the default is `5433`).
 * `dbUser` - the username for your instance.
 * `dbPassword` - the database password.
-* `sslMode` - the SSL mode. Set to `verify-full` for YugabyteDB Managed deployments.
+* `sslMode` - the SSL mode. Set to `verify-full` for YugabyteDB Aeon deployments.
 * `sslRootCert` - a full path to your CA root cert (for example, `/Users/dmagda/certificates/root.crt`) 
 
-Note, you can easily find all the settings on the YugabyteDB Managed dashboard:
+Note, you can easily find all the settings on the YugabyteDB Aeon dashboard:
 
 ![image](resources/cloud_app_settings.png)
 
